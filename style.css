@@ -1,0 +1,254 @@
+/*************
+variables
+*************/
+/*************
+mixins
+*************/
+/*************
+basic styles
+*************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  color: #383838;
+  padding: 10px 0 30px 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Arizonia", sans-serif;
+  color: #383838; }
+
+.container {
+  width: 80%;
+  margin: auto; }
+
+a {
+  text-decoration: none; }
+  a:hover {
+    transition: 0.4s ease; }
+
+.sign-up {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: #96f2d7;
+  color: #383838;
+  width: 100%;
+  text-align: center;
+  padding: 12px; }
+  .sign-up a {
+    color: RGB(112, 72, 232); }
+
+.main-headings {
+  font-size: 5rem;
+  margin-bottom: 15px; }
+  @media (max-width: 768px) {
+    .main-headings {
+      font-size: 3rem; } }
+
+.icons {
+  display: flex;
+  list-style: none; }
+  .icons li {
+    margin-right: 30px; }
+    .icons li a {
+      font-size: 2rem;
+      color: RGB(112, 72, 232); }
+      .icons li a:hover {
+        color: #383838;
+        transition-duration: 0.7s; }
+    .icons li i:hover {
+      animation: fullCircle 0.7s linear; }
+@keyframes fullCircle {
+  100% {
+    transform: rotate(360deg); } }
+/*************
+nav
+*************/
+nav {
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-between; }
+  @media (max-width: 768px) {
+    nav {
+      flex-direction: column; } }
+  nav .logo {
+    font-family: "Arizonia", sans-serif;
+    font-size: 3rem;
+    color: #fff;
+    background: #383838;
+    padding: 10px 15px;
+    border-radius: 10px 35px;
+    text-align: center; }
+    @media (max-width: 768px) {
+      nav .logo {
+        font-size: 2.3rem; } }
+  nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    nav ul .active {
+      background: #383838;
+      color: #fff;
+      padding: 10px 20px;
+      border: 4px solid #383838;
+      border-radius: 25px; }
+    nav ul li {
+      list-style: none;
+      margin-left: 50px; }
+      @media (max-width: 768px) {
+        nav ul li {
+          margin: 20px 5px 5px; } }
+      nav ul li a {
+        font-size: 1.2rem;
+        color: #383838;
+        font-weight: 900;
+        text-transform: uppercase; }
+        nav ul li a:hover {
+          background: transparent;
+          color: #383838; }
+
+/*************
+home
+*************/
+#home {
+  background-image: url(img/home.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; }
+  @media (max-width: 768px) {
+    #home {
+      background-position: 70% 0%;
+      background-image: linear-gradient(rgba(255, 222, 235, 0.4), #ffdeeb99), url(img/home.jpg); } }
+  #home .about-home {
+    height: 72vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 1.5rem;
+    width: 60%; }
+    @media (max-width: 768px) {
+      #home .about-home {
+        width: 100%;
+        font-size: 1.2rem;
+        text-align: center; } }
+
+/*************
+about
+*************/
+#about {
+  background: linear-gradient(RGB(229, 188, 228) 40%, RGB(240, 213, 218) 80%); }
+  @media (max-width: 768px) {
+    #about {
+      background: linear-gradient(RGB(229, 188, 228) 30%, RGB(240, 213, 218) 60%); } }
+  #about .about-page {
+    padding-top: 100px;
+    padding-bottom: 50px; }
+    @media (max-width: 768px) {
+      #about .about-page {
+        padding-top: 50px; } }
+    #about .about-page p {
+      text-align: justify;
+      font-size: 1.15rem; }
+      #about .about-page p span {
+        font-weight: bold; }
+      #about .about-page p .img-left {
+        float: left;
+        width: 20%; }
+        @media (max-width: 768px) {
+          #about .about-page p .img-left {
+            width: 100%; } }
+        #about .about-page p .img-left:hover {
+          display: block;
+          transform: rotate(360deg);
+          transition-duration: 1s; }
+      #about .about-page p .img-right {
+        float: right;
+        width: 20%; }
+        @media (max-width: 768px) {
+          #about .about-page p .img-right {
+            width: 100%; } }
+        #about .about-page p .img-right:hover {
+          display: block;
+          transform: rotate(-360deg);
+          transition-duration: 1s; }
+    #about .about-page .author {
+      text-align: right;
+      font-size: 1rem;
+      padding-top: 50px; }
+      #about .about-page .author span {
+        font-size: 1.3rem; }
+
+/*************
+contact
+*************/
+#contact {
+  background-image: url(img/contact.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50% 42%; }
+  #contact .contact {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 110px;
+    flex-wrap: wrap; }
+    @media (max-width: 768px) {
+      #contact .contact {
+        padding-top: 80px; } }
+    #contact .contact .contact-text {
+      font-size: 1.15rem;
+      flex: 0 0 47%; }
+      @media (max-width: 768px) {
+        #contact .contact .contact-text {
+          flex: 0 0 100%; } }
+      #contact .contact .contact-text .copy {
+        padding-bottom: 110px; }
+        @media (max-width: 768px) {
+          #contact .contact .contact-text .copy {
+            padding-top: 80px; } }
+    #contact .contact .form {
+      flex: 0 0 47%; }
+      @media (max-width: 768px) {
+        #contact .contact .form {
+          flex: 0 0 100%;
+          margin-top: 80px; } }
+      #contact .contact .form form input {
+        width: 100%;
+        padding: 10px;
+        border-radius: 20px 40px;
+        border: none;
+        font-size: 1.15rem;
+        font-weight: 900;
+        color: #383838;
+        opacity: 0.6;
+        margin-bottom: 10px;
+        font-family: sans-serif; }
+      #contact .contact .form form textarea {
+        width: 100%;
+        padding: 10px;
+        border-radius: 20px 40px;
+        border: none;
+        font-size: 1.15rem;
+        font-weight: 900;
+        color: #383838;
+        opacity: 0.6;
+        margin-bottom: 10px;
+        font-family: sans-serif; }
+      #contact .contact .form form input[type='submit'] {
+        background: #383838;
+        width: 300px;
+        color: #fff;
+        cursor: pointer;
+        margin-top: 20px;
+        opacity: 1; }
+        #contact .contact .form form input[type='submit']:hover {
+          background: #666;
+          transition: 0.4s ease; }
+
+/*# sourceMappingURL=style.css.map */
